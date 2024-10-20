@@ -1,10 +1,20 @@
-import { CloseIcon, Modal as GModal, Heading, Icon, ModalBackdrop, ModalBody, ModalCloseButton, ModalContent, ModalHeader } from "@gluestack-ui/themed"
-import { FC, PropsWithChildren } from "react"
+import {
+  CloseIcon,
+  Modal as GModal,
+  Heading,
+  Icon,
+  ModalBackdrop,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalHeader,
+} from '@gluestack-ui/themed'
+import { FC, PropsWithChildren } from 'react'
 
 type ModalProps = {
-  isOpen: boolean,
-  onClose: () => void,
-  title: string,
+  isOpen: boolean
+  onClose: () => void
+  title: string
 }
 
 const Modal: FC<PropsWithChildren<ModalProps>> = ({
@@ -14,23 +24,16 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
   children,
 }) => {
   return (
-    <GModal
-      isOpen={isOpen}
-      onClose={onClose}
-    >
+    <GModal isOpen={isOpen} onClose={onClose}>
       <ModalBackdrop />
       <ModalContent>
         <ModalHeader>
-          <Heading>
-            {title}
-          </Heading>
+          <Heading>{title}</Heading>
           <ModalCloseButton>
-            <Icon as={CloseIcon} size="lg"/>
+            <Icon as={CloseIcon} size="lg" />
           </ModalCloseButton>
         </ModalHeader>
-        <ModalBody>
-          {children}
-        </ModalBody>
+        <ModalBody>{children}</ModalBody>
       </ModalContent>
     </GModal>
   )

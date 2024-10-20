@@ -1,14 +1,21 @@
-import { FC, useCallback, useState } from "react"
-import { ListItem } from "../molecules"
-import { AddIcon, Button, ButtonIcon, ButtonText, Divider, FlatList } from "@gluestack-ui/themed"
-import AddProductModal from "./AddProductModal"
-import { Product } from "~/types/product"
+import { FC, useCallback, useState } from 'react'
+import { ListItem } from '../molecules'
+import {
+  AddIcon,
+  Button,
+  ButtonIcon,
+  ButtonText,
+  Divider,
+  FlatList,
+} from '@gluestack-ui/themed'
+import AddProductModal from './AddProductModal'
+import { Product } from '~/types/product'
 
 type ListProps = {
-  data: Product[],
-  onPressAddItem: (item: Omit<Product, 'id' | 'isChecked'>) => void,
-  onPressDeleteItem: (id: string) => void,
-  onPressUpdateItem: (item: Product) => void,
+  data: Product[]
+  onPressAddItem: (item: Omit<Product, 'id' | 'isChecked'>) => void
+  onPressDeleteItem: (id: string) => void
+  onPressUpdateItem: (item: Product) => void
 }
 
 const List: FC<ListProps> = ({
@@ -17,8 +24,8 @@ const List: FC<ListProps> = ({
   onPressDeleteItem,
   onPressUpdateItem,
 }) => {
-
-  const [isAddProductModalVisible, setIsAddProductModalVisible] = useState(false)
+  const [isAddProductModalVisible, setIsAddProductModalVisible] =
+    useState(false)
 
   const handleAddProductModalClose = useCallback(() => {
     setIsAddProductModalVisible(false)
@@ -45,9 +52,7 @@ const List: FC<ListProps> = ({
         renderItem={_renderItem}
         ListHeaderComponent={
           <Button onPress={handleAddProductModalOpen}>
-            <ButtonText>
-              Add Item
-            </ButtonText>
+            <ButtonText>Add Item</ButtonText>
             <ButtonIcon as={AddIcon} />
           </Button>
         }

@@ -1,11 +1,13 @@
-import { Product } from "~/types/product"
+import { Product } from '~/types/product'
 
 export const getProducts = async () => {
   const response = await fetch('http://localhost:3000/products')
   return response.json()
 }
 
-export const addProduct = async (product: Omit<Product, 'id' | 'isChecked'>) => {
+export const addProduct = async (
+  product: Omit<Product, 'id' | 'isChecked'>,
+) => {
   await fetch('http://localhost:3000/products', {
     method: 'POST',
     headers: {

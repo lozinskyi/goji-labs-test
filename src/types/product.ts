@@ -1,6 +1,6 @@
 export type Product = {
-  id: string,
-  name: string,
-  amount: number,
-  isChecked: boolean,
+  id: string
+  name: string
+  amount: number
+  isChecked: boolean
 }

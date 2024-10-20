@@ -6,7 +6,6 @@ import { useAddProduct, useDeleteProduct, useUpdateProduct } from '../mutations'
 import { Product } from '~/types/product'
 
 const GroceryList: FC = () => {
-
   const { data } = useGetProducts()
 
   const { mutate: addProduct } = useAddProduct()
@@ -15,23 +14,26 @@ const GroceryList: FC = () => {
 
   const { mutate: updateProduct } = useUpdateProduct()
 
-  const handleAddItem = useCallback((item: Omit<Product, 'id' | 'isChecked'>) => {
-    addProduct(item)
-  }, [
-    addProduct,
-  ])
+  const handleAddItem = useCallback(
+    (item: Omit<Product, 'id' | 'isChecked'>) => {
+      addProduct(item)
+    },
+    [addProduct],
+  )
 
-  const handleDeleteItem = useCallback((id: string) => {
-    deleteProduct(id)
-  }, [
-    deleteProduct,
-  ])
+  const handleDeleteItem = useCallback(
+    (id: string) => {
+      deleteProduct(id)
+    },
+    [deleteProduct],
+  )
 
-  const handleUpdateItem = useCallback((item: Product) => {
-    updateProduct(item)
-  }, [
-    updateProduct,
-  ])
+  const handleUpdateItem = useCallback(
+    (item: Product) => {
+      updateProduct(item)
+    },
+    [updateProduct],
+  )
 
   return (
     <View>

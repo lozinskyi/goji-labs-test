@@ -1,6 +1,5 @@
-import { useMutation, useQueryClient } from "@tanstack/react-query"
-import { addProduct } from "../api"
-
+import { useMutation, useQueryClient } from '@tanstack/react-query'
+import { addProduct } from '../api'
 
 const useAddProduct = () => {
   const queryClient = useQueryClient()
@@ -8,7 +7,7 @@ const useAddProduct = () => {
     mutationFn: addProduct,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['products'] })
-    }
+    },
   })
 }
 

@@ -1,12 +1,22 @@
-import { Box, Button, ButtonText, FormControl, FormControlLabel, FormControlLabelText, Input, InputField, Text } from "@gluestack-ui/themed"
-import { FC } from "react"
-import { Controller, useForm } from "react-hook-form"
-import { Product } from "~/types/product"
+import {
+  Box,
+  Button,
+  ButtonText,
+  FormControl,
+  FormControlLabel,
+  FormControlLabelText,
+  Input,
+  InputField,
+  Text,
+} from '@gluestack-ui/themed'
+import { FC } from 'react'
+import { Controller, useForm } from 'react-hook-form'
+import { Product } from '~/types/product'
 
 type ProductFormProps = {
-  onSubmit: (data: Omit<Product, 'id' | 'isChecked'>) => void,
-  submitButtonText?: string,
-  defaultValues?: Omit<Product, 'id' | 'isChecked'>,
+  onSubmit: (data: Omit<Product, 'id' | 'isChecked'>) => void
+  submitButtonText?: string
+  defaultValues?: Omit<Product, 'id' | 'isChecked'>
 }
 
 const ProductForm: FC<ProductFormProps> = ({
@@ -14,7 +24,6 @@ const ProductForm: FC<ProductFormProps> = ({
   submitButtonText = 'Submit',
   defaultValues,
 }) => {
-
   const {
     control,
     handleSubmit,
@@ -73,9 +82,7 @@ const ProductForm: FC<ProductFormProps> = ({
         {errors.amount && <Text>This is required.</Text>}
       </FormControl>
       <Button onPress={handleSubmit(onSubmit)}>
-        <ButtonText>
-          {submitButtonText}
-        </ButtonText>
+        <ButtonText>{submitButtonText}</ButtonText>
       </Button>
     </Box>
   )

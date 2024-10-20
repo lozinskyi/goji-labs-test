@@ -1,13 +1,26 @@
-import { Box, Button, ButtonGroup, ButtonIcon, Checkbox, CheckboxIcon, CheckboxIndicator, CheckboxLabel, CheckIcon, EditIcon, Text, TrashIcon } from "@gluestack-ui/themed"
-import { FC, useCallback, useState } from "react"
-import { StyleSheet } from "react-native"
-import { Product } from "~/types/product"
-import { EditProductModal } from "../organisms"
+import {
+  Box,
+  Button,
+  ButtonGroup,
+  ButtonIcon,
+  Checkbox,
+  CheckboxIcon,
+  CheckboxIndicator,
+  CheckboxLabel,
+  CheckIcon,
+  EditIcon,
+  Text,
+  TrashIcon,
+} from '@gluestack-ui/themed'
+import { FC, useCallback, useState } from 'react'
+import { StyleSheet } from 'react-native'
+import { Product } from '~/types/product'
+import { EditProductModal } from '../organisms'
 
 type ListItemProps = {
-  item: Product,
-  onPressDeleteItem: (id: string) => void,
-  onPressUpdateItem: (item: Product) => void,
+  item: Product
+  onPressDeleteItem: (id: string) => void
+  onPressUpdateItem: (item: Product) => void
 }
 
 const ListItem: FC<ListItemProps> = ({
@@ -15,7 +28,6 @@ const ListItem: FC<ListItemProps> = ({
   onPressDeleteItem,
   onPressUpdateItem,
 }) => {
-
   const [isEditModalVisible, setIsEditModalVisible] = useState(false)
 
   const handleEditModalClose = useCallback(() => {
@@ -31,14 +43,12 @@ const ListItem: FC<ListItemProps> = ({
       ...item,
       isChecked: !item.isChecked,
     })
-  }, [
-    item,
-  ])
+  }, [item])
 
   return (
-    <Box p='$4' style={styles.container}>
+    <Box p="$4" style={styles.container}>
       <Checkbox
-        value='item'
+        value="item"
         isChecked={item.isChecked}
         onPress={handlePressCheckbox}
       >
@@ -85,7 +95,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-  }
+  },
 })
 
 export default ListItem
