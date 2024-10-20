@@ -9,7 +9,6 @@ import {
   CheckboxLabel,
   CheckIcon,
   EditIcon,
-  Text,
   TrashIcon,
 } from '@gluestack-ui/themed'
 import { FC, useCallback, useState } from 'react'
@@ -43,7 +42,7 @@ const ListItem: FC<ListItemProps> = ({
       ...item,
       isChecked: !item.isChecked,
     })
-  }, [item])
+  }, [item, onPressUpdateItem])
 
   return (
     <Box p="$4" style={styles.container}>

@@ -10,7 +10,7 @@ const useDeleteProduct = () => {
       queryClient.invalidateQueries({ queryKey: ['products'] })
     },
     onError: error => {
-      console.log(error)
+      console.error(error)
     },
   })
 }

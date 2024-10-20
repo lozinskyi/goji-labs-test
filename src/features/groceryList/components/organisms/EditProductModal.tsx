@@ -24,7 +24,7 @@ const EditProductModal: FC<EditProductModalProps> = ({
       })
       onClose()
     },
-    [editItem, onClose],
+    [editItem, onClose, item],
   )
 
   return (

@@ -8,6 +8,7 @@ module.exports = {
         alias: {
           '~/core': './src/core',
           '~/features': './src/features',
+          '~/types': './src/types',
         },
       },
     ],
