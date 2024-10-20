@@ -3,13 +3,13 @@
     {
       "id": "1729356224254",
       "name": "Apple",
-      "amount": 1,
+      "amount": "98",
       "isChecked": false
     },
     {
       "id": "1729360967639",
       "name": "Pen",
-      "amount": "24",
+      "amount": "29",
       "isChecked": false
     },
     {
@@ -23,6 +23,12 @@
       "name": "box",
       "amount": "109",
       "isChecked": false
+    },
+    {
+      "id": "1729441909258",
+      "isChecked": false,
+      "name": "Food",
+      "amount": 0
     }
   ]
 }
