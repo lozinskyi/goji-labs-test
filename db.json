@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": "1729356224254",
+      "name": "Apple",
+      "amount": 1,
+      "isChecked": false
+    },
+    {
+      "id": "1729360967639",
+      "name": "Pen",
+      "amount": "24",
+      "isChecked": false
+    },
+    {
+      "id": "1729417527894",
+      "name": "Pineappple",
+      "amount": "5",
+      "isChecked": false
+    },
+    {
+      "id": "1729421269019",
+      "name": "box",
+      "amount": "109",
+      "isChecked": false
+    }
+  ]
+}
