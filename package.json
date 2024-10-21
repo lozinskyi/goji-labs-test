@@ -3,8 +3,12 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios --simulator='iPhone 16 Pro'",
+    "android:dev": "react-native run-android --appIdSuffix development",
+    "android:stage": "react-native run-android --appIdSuffix staging",
+    "android:prod": "react-native run-android --appId com.gojilabstest.prod",
+    "ios:dev": "react-native run-ios --simulator='iPhone 16 Pro'",
+    "ios:stage": "react-native run-ios --scheme Stage.GojiLabsTest --simulator='iPhone 16 Pro'",
+    "ios:prod": "react-native run-ios --scheme Prod.GojiLabsTest",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
@@ -20,6 +24,7 @@
     "react": "18.3.1",
     "react-hook-form": "^7.53.1",
     "react-native": "0.75.4",
+    "react-native-config": "^1.5.3",
     "react-native-safe-area-context": "^4.11.1",
     "react-native-screens": "^3.34.0",
     "react-native-svg": "13.4.0"

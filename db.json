@@ -25,10 +25,10 @@
       "isChecked": false
     },
     {
-      "id": "1729441909258",
+      "id": "1729443183196",
       "isChecked": false,
-      "name": "Food",
-      "amount": 0
+      "name": "Juice",
+      "amount": "23"
     }
   ]
 }
